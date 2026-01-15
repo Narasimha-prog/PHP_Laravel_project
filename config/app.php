@@ -1,5 +1,6 @@
 <?php
 
+
 return [
 
     /*
@@ -122,5 +123,33 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
+'providers' => [
+
+    /*
+     * Laravel Framework Service Providers...
+     */
+       Illuminate\Database\DatabaseServiceProvider::class,
+    Illuminate\Auth\AuthServiceProvider::class,
+    Illuminate\Broadcasting\BroadcastServiceProvider::class,
+    Illuminate\Bus\BusServiceProvider::class,
+    Illuminate\Cache\CacheServiceProvider::class,
+    Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
+    Illuminate\Hashing\HashServiceProvider::class,
+    Illuminate\Mail\MailServiceProvider::class,
+    Illuminate\Pipeline\PipelineServiceProvider::class,
+    Illuminate\Queue\QueueServiceProvider::class,
+    Illuminate\Redis\RedisServiceProvider::class,
+    Illuminate\Session\SessionServiceProvider::class,
+    Illuminate\Filesystem\FilesystemServiceProvider::class, // ✅ important for "files"
+    Illuminate\View\ViewServiceProvider::class,
+    Illuminate\Foundation\Providers\FoundationServiceProvider::class,
+
+    /*
+     * Application Service Providers...
+     */
+    App\Providers\AppServiceProvider::class,
+    App\Providers\RouteServiceProvider::class,  // ✅ needed for routes
+]
+
 
 ];
