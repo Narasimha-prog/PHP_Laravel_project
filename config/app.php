@@ -143,7 +143,9 @@ return [
     Illuminate\Filesystem\FilesystemServiceProvider::class, // ✅ important for "files"
     Illuminate\View\ViewServiceProvider::class,
     Illuminate\Foundation\Providers\FoundationServiceProvider::class,
-
+Laravel\Socialite\SocialiteServiceProvider::class,
+Illuminate\Auth\AuthServiceProvider::class,
+    Illuminate\Broadcasting\BroadcastServiceProvider::class,
     /*
      * Application Service Providers...
      */

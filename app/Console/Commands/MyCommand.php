@@ -30,3 +30,6 @@ class MyCommand extends Command
         echo'my code is running ....';
     }
 }
+?>
+
+?
