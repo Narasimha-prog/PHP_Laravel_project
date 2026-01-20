@@ -128,7 +128,9 @@ return [
     /*
      * Laravel Framework Service Providers...
      */
-       Illuminate\Database\DatabaseServiceProvider::class,
+    Illuminate\Encryption\EncryptionServiceProvider::class,
+
+    Illuminate\Database\DatabaseServiceProvider::class,
     Illuminate\Auth\AuthServiceProvider::class,
     Illuminate\Broadcasting\BroadcastServiceProvider::class,
     Illuminate\Bus\BusServiceProvider::class,
@@ -143,8 +145,8 @@ return [
     Illuminate\Filesystem\FilesystemServiceProvider::class, // ✅ important for "files"
     Illuminate\View\ViewServiceProvider::class,
     Illuminate\Foundation\Providers\FoundationServiceProvider::class,
-Laravel\Socialite\SocialiteServiceProvider::class,
-Illuminate\Auth\AuthServiceProvider::class,
+    Laravel\Socialite\SocialiteServiceProvider::class,
+    Illuminate\Auth\AuthServiceProvider::class,
     Illuminate\Broadcasting\BroadcastServiceProvider::class,
     /*
      * Application Service Providers...
@@ -152,6 +154,8 @@ Illuminate\Auth\AuthServiceProvider::class,
     App\Providers\AppServiceProvider::class,
     App\Providers\RouteServiceProvider::class,  // ✅ needed for routes
      Illuminate\Cookie\CookieServiceProvider::class,
+     Illuminate\Translation\TranslationServiceProvider::class,
+
 ]
 
 

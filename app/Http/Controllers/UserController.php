@@ -21,9 +21,12 @@ class UserController extends Controller
             ]
         ]);
     }
-
+/**
+ * @param \Illuminate\Http\Request $request
+ */
     public function me(Request $request): JsonResponse
 {
+    // Return the authenticated user
     return response()->json([
         'user' => $request->user(),
     ]);

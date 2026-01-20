@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Str;
 use Laravel\Socialite\Facades\Socialite;
-use Illuminate\Support\Facades\Cookie;
 
 
+use Illuminate\Support\Facades\Auth;
 
 class GoogleAuthController extends Controller
 {
@@ -39,22 +39,10 @@ class GoogleAuthController extends Controller
             ]
         );
 
-        // generate API token (e.g. Sanctum, Passport) for your SPA
-        $token = $user->createToken('google_login')->plainTextToken;
+        Auth::login($user);
 
-        return response()->redirectTo('http://localhost:5173/dashboard')
-             ->cookie(
-
-            'auth_token',
-            $token,
-            60 * 24,   // minutes
-            '/',
-            null,
-            false,     // secure (false for localhost)
-            true       // HttpOnly ✅
-        
-    );
-
+        return redirect('http://localhost:5173/dashboard');
+   
     }
 
 }
