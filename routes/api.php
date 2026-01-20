@@ -9,3 +9,5 @@ Route::get('/users', [UserController::class, 'index']);
 
 Route::get('auth/google/redirect', [GoogleAuthController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [GoogleAuthController::class, 'handleGoogleCallback']);
+
+Route::middleware('auth:sanctum')->get('/me', [UserController::class, 'me']);

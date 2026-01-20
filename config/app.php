@@ -151,6 +151,7 @@ Illuminate\Auth\AuthServiceProvider::class,
      */
     App\Providers\AppServiceProvider::class,
     App\Providers\RouteServiceProvider::class,  // ✅ needed for routes
+     Illuminate\Cookie\CookieServiceProvider::class,
 ]
 
 
